@@ -24,11 +24,11 @@ export default function BannerSlider() {
     <div>
       <Slider {...settings}>
         {/* slider 1 */}
-        <div className="w-full h-[95vh] relative">
+        <div className="w-full h-[95vh] relative ">
           {/* image */}
           <img className="w-full h-full object-cover" src={benner1} alt="Slide 1" />
           {/* detail on benner */}
-          <div className="w-full h-full flex absolute top-0 left-0">
+          <div className="w-full h-full flex absolute z-10 top-0 left-0">
               {/* image */}
               <div className="w-1/2 p-24 flex justify-center items-center h-full ">
                   <img className="w-full h-full animate__animated animate__backInUp" src={controller}  alt="controller" />
@@ -46,7 +46,7 @@ export default function BannerSlider() {
           </div>
         </div>
         {/* slider 2 */}
-        <div className="w-full h-[95vh] relative">
+        <div className="w-full h-[95vh] relative ">
           {/* image */}
           <img className="w-full h-full object-cover" src={benner2} alt="Slide 1" />
           {/* detail on benner */}

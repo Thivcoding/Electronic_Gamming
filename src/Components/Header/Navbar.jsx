@@ -100,10 +100,10 @@ const Navbar = () => {
         </nav>
 
         {/* OpenSearch */}
-        <div className={`w-full h-screen fixed top-0 left-0  transition-all duration-500 ease-in-out
+        <div className={`w-full h-screen fixed  top-0 left-0  z-50 transition-all duration-500 ease-in-out
                 ${OpenSearch ? " bg-black/40  pointer-events-auto" : " pointer-events-none"}`} onClick={()=>setOperSearch(false)}>
         </div>
-        <div className={`w-[400px] h-screen bg-white shadow-2xl fixed top-0 lg:left-0 right-0 
+        <div className={`w-[400px] h-screen bg-white shadow-2xl fixed  z-50 top-0 lg:left-0 right-0 
                 ${OpenSearch ? "translate-x-0" : "lg:-translate-x-full translate-x-full" }
                   transition-all duration-500 ease-in-out `}>
 
@@ -120,11 +120,11 @@ const Navbar = () => {
         </div>
 
         {/* OpenCart */}
-        <div className={`w-full h-screen fixed top-0 left-0  transition-all duration-500 ease-in-out
+        <div className={`w-full h-screen fixed  top-0 left-0 z-50 transition-all duration-500 ease-in-out
                 ${OpenCart ? " bg-black/40  pointer-events-auto" : " pointer-events-none"}`} onClick={()=>setOpenCart(false)}>
                     
         </div>
-        <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl fixed top-0 right-0 
+        <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl  z-50 fixed top-0 right-0 
                           ${OpenCart ? "translate-x-0" : "translate-x-full" }
                             transition-all duration-500 ease-in-out `}>
 
@@ -140,7 +140,7 @@ const Navbar = () => {
         </div>
            
         {/* OpenSidbar */}
-            <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl fixed top-0 left-0 
+            <div className={`lg:w-[500px] w-full z-50 h-screen bg-white shadow-2xl fixed top-0 left-0 
                 ${OpenSidbar ? "translate-x-0" : "-translate-x-full" }
                   transition-all duration-500 ease-in-out `}>
 
