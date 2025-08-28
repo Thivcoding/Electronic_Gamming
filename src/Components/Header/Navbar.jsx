@@ -74,7 +74,9 @@ const Navbar = () => {
                         <FiShoppingCart 
                         onClick={()=>setOpenCart(!OpenCart)}
                         className='text-2xl cursor-pointer text-white ' />
-                        <div className='w-5 h-5 flex items-center justify-center
+                        <div 
+                          onClick={()=>setOpenCart(!OpenCart)}
+                        className='w-5 h-5 flex items-center justify-center
                         text-white bg-red-500 cursor-pointer rounded-full absolute -right-3 -top-3'>
                           1
                         </div>
@@ -98,38 +100,45 @@ const Navbar = () => {
         </nav>
 
         {/* OpenSearch */}
+        <div className={`w-full h-screen fixed top-0 left-0  transition-all duration-500 ease-in-out
+                ${OpenSearch ? " bg-black/40  pointer-events-auto" : " pointer-events-none"}`} onClick={()=>setOperSearch(false)}>
+        </div>
         <div className={`w-[400px] h-screen bg-white shadow-2xl fixed top-0 lg:left-0 right-0 
-        ${OpenSearch ? "translate-x-0" : "lg:-translate-x-full translate-x-full" }
-          transition-all duration-500 ease-in-out `}>
+                ${OpenSearch ? "translate-x-0" : "lg:-translate-x-full translate-x-full" }
+                  transition-all duration-500 ease-in-out `}>
 
-          {/* inputSearch */}
-          <div className='w-full h-24  border-b relative'>
-              {/* icon search */}
-                  <IoMdSearch className='absolute text-black top-9 text-3xl left-5' />
-                  <input type="text" className='w-full px-16 h-full border-0 outline-0' 
-                  placeholder='What Are You Looking For?' />
-                  <IoCloseSharp className='absolute text-black cursor-pointer top-9 text-3xl right-5'
-                    onClick={()=>setOperSearch(false)}
-                  />
-          </div>
+              {/* inputSearch */}
+              <div className='w-full h-24  border-b relative'>
+                  {/* icon search */}
+                      <IoMdSearch className='absolute text-black top-9 text-3xl left-5' />
+                      <input type="text" className='w-full px-16 h-full border-0 outline-0' 
+                      placeholder='What Are You Looking For?' />
+                      <IoCloseSharp className='absolute text-black cursor-pointer top-9 text-3xl right-5'
+                        onClick={()=>setOperSearch(false)}
+                      />
+              </div>
         </div>
 
         {/* OpenCart */}
-            <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl fixed top-0 right-0 
-                ${OpenCart ? "translate-x-0" : "translate-x-full" }
-                  transition-all duration-500 ease-in-out `}>
+        <div className={`w-full h-screen fixed top-0 left-0  transition-all duration-500 ease-in-out
+                ${OpenCart ? " bg-black/40  pointer-events-auto" : " pointer-events-none"}`} onClick={()=>setOpenCart(false)}>
+                    
+        </div>
+        <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl fixed top-0 right-0 
+                          ${OpenCart ? "translate-x-0" : "translate-x-full" }
+                            transition-all duration-500 ease-in-out `}>
 
-                  <div className='w-full h-16  border-b relative'>
-                          <IoCloseSharp className='absolute text-black cursor-pointer top-4 text-3xl right-5'
-                            onClick={()=>setOpenCart(false)}
-                          />
-                          <div className='w-full h-full px-5 flex items-center '>
-                              <RiShoppingBag4Line className='text-3xl me-2'  />
-                            <h1 className='font-bold text-xl'>1 ITEM</h1>
-                          </div>
-                  </div>
-            </div>
-
+              <div className='w-full h-16  border-b relative'>
+                      <IoCloseSharp className='absolute text-black cursor-pointer top-4 text-3xl right-5'
+                        onClick={()=>setOpenCart(false)}
+                      />
+                      <div className='w-full h-full px-5 flex items-center '>
+                          <RiShoppingBag4Line className='text-3xl me-2'  />
+                        <h1 className='font-bold text-xl'>1 ITEM</h1>
+                      </div>
+              </div>
+        </div>
+           
         {/* OpenSidbar */}
             <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl fixed top-0 left-0 
                 ${OpenSidbar ? "translate-x-0" : "-translate-x-full" }
