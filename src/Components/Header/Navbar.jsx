@@ -15,7 +15,7 @@ const Navbar = () => {
     const [OpenSidbar,setOpenSidbar] = useState(false);
 
   return (
-    <header className='w-full shadow-md h-[100px] lg:h-[200px] bg-gray-500'>
+    <header className='w-full shadow-md h-[130px] lg:h-[200px] bg-gray-500'>
       
         {/* top  */}
         <h1 className='w-full flex justify-center  items-center text-white
