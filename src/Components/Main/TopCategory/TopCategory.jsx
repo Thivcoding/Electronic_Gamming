@@ -1,6 +1,8 @@
 import React from 'react'
 import controller from '../../../assets/Images/controller.webp'
 import { Topcategories } from '../../../Data'
+import benner_mask_1 from '../../../assets/Images/Benner-Mask-1.webp'
+import benner_mask_2 from '../../../assets/Images/Benner-Mask-2.webp'
 
 const TopCategory = () => {
   return (
@@ -30,6 +32,48 @@ const TopCategory = () => {
                 </div>
             ))}
 
+        </div>
+
+
+        <div className='w-full flex flex-wrap gap-7 h-auto mt-16'>
+            {/* left  */}
+            <div className='w-full lg:w-[49%] h-[260px] relative group bg-red-300 rounded-xl overflow-hidden'>
+                 <div className='w-full h-full'>
+                    <img className='w-full h-full transform group-hover:scale-110 transition-all 
+                    duration-300 ease-in-out  object-cover' src={benner_mask_1 } alt="" />
+                </div>
+                <div className='w-full h-full absolute top-0 left-0 p-5 bg-black/20'>
+                    <h3 className='text-2xl text-white font-bold'>THE ULTIMATE PLAY</h3>
+                    <h1 className='text-5xl py-2 font-bold text-white'>GEFORCE RTX <br />
+                        3060TI 
+                    </h1>
+                    <h2 className='text-green-400 text-2xl font-bold '>$599.99</h2>
+                    <div className='w-full flex justify-end'>
+                        <button className='bg-white py-2 px-7 font-bold hover:bg-red-500 
+                        rounded-md hover:text-white cursor-pointer transition-all duration-300 
+                        ease-in-out'>Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            {/* right */}
+            <div className='w-full lg:w-[49%] h-[260px] relative group bg-red-300 rounded-xl overflow-hidden'>
+                <div className='w-full h-full'>
+                    <img className='w-full h-full transform group-hover:scale-110 transition-all 
+                    duration-300 ease-in-out  object-cover' src={benner_mask_2 } alt="" />
+                </div>
+                <div className='w-full h-full absolute  top-0 left-0 p-5 '>
+                    <h3 className='text-2xl text-white font-bold'>POWER TO THE CORE</h3>
+                    <h1 className='text-5xl py-2 font-bold text-white'>AORUS ELITE<br />
+                        AX AM5
+                    </h1>
+                    <h2 className='text-sky-400 text-2xl font-bold '>$199.99</h2>
+                    <div className='w-full flex justify-end'>
+                        <button className='bg-white py-2 px-7 font-bold hover:bg-red-500 
+                        rounded-md hover:text-white cursor-pointer transition-all duration-300 
+                        ease-in-out'>Shop Now</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   )

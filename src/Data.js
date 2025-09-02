@@ -17,13 +17,16 @@ export const menu_bottom = [
   { name: "SALE", link: "/sale" }
 ];
 
+
+//
+
 export const Topcategories = [
   {
     id: 1,
     title1: "Gaming",
     title2: "Controllers",
     products: 17,
-    // image: controllerImg,
+    // image: cate_1,
     link: "/controllers",
   },
   {
@@ -31,7 +34,7 @@ export const Topcategories = [
     title1: "Gaming",
     title2: "Mouse",
     products: 16,
-    // image: mouseImg,
+    // image: cate_2,
     link: "/mouse",
   },
   {
@@ -39,7 +42,7 @@ export const Topcategories = [
     title1: "Gaming",
     title2: "Chairs",
     products: 4,
-    // image: chairImg,
+    // image: cate_3,
     link: "/chairs",
   },
   {
@@ -47,21 +50,21 @@ export const Topcategories = [
     title1: "Gaming",
     title2: "Headsets",
     products: 29,
-    // image: headsetImg,
+    // image: cate_4,
     link: "/headsets",
   },
   {
     id: 5,
     title1: "Keyboards",
     products: 9,
-    // image: keyboardImg,
+    // image: cate_5,
     link: "/keyboards",
   },
   {
     id: 6,
     title1: "Accessories",
     products: 27,
-    // image: accessoriesImg,
+    // image: cate_6,
     link: "/accessories",
   },
 ];
