@@ -1,5 +1,4 @@
 import React from 'react'
-import controller from '../../../assets/Images/controller.webp'
 import { Topcategories } from '../../../Data'
 import benner_mask_1 from '../../../assets/Images/Benner-Mask-1.webp'
 import benner_mask_2 from '../../../assets/Images/Benner-Mask-2.webp'
@@ -25,8 +24,8 @@ const TopCategory = () => {
                         <span>{cate.title2}</span></h1>
                     </div>
                     {/* card-image */}
-                    <div className='w-1/2 h-full  pe-5 pt-20 pb-3'>
-                        <img className='w-full h-full ' src={controller} alt="controller" />
+                    <div className='w-1/2 h-full  pe-5 pt-10 pb-3'>
+                        <img className='w-full h-full ' src={cate.image} alt="controller" />
                     </div>
                     
                 </div>
