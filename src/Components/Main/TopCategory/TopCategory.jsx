@@ -15,7 +15,7 @@ const TopCategory = () => {
         <div className='w-full h-auto flex gap-5 md:gap-7 flex-wrap py-10'>
             {/* card */}
             {Topcategories.map((cate)=>(
-                <div className='w-full md:w-[48%] lg:w-[32%]  flex lg:h-[300px] cursor-pointer rounded-xl group bg-gray-200 '>
+                <div className='w-full md:w-[48%] lg:w-[32%]  flex lg:h-[300px]  cursor-pointer rounded-xl group bg-gray-200 '>
                     {/* card-detail */}
                     <div className='w-1/2 h-full pt-10 ps-10 '>
                         <button className='bg-white px-5 py-1 text-sm rounded-md text-gray-500 group-hover:bg-red-500
@@ -24,7 +24,7 @@ const TopCategory = () => {
                         <span>{cate.title2}</span></h1>
                     </div>
                     {/* card-image */}
-                    <div className='w-1/2 h-full  pe-5 pt-3 pb-3'>
+                    <div className='w-1/2 h-full  pe-5 pt-10 pb-3'>
                         <img className='w-full h-full ' src={cate.image} alt="controller" />
                     </div>
                     

@@ -41,7 +41,8 @@ const BestSellers = () => {
         <div className='w-full flex flex-wrap gap-9 py-10 h-auto'>
             {/* card */}
             {ResultProdctShow.products.map((p,i)=>(
-                <div key={p.id} className='w-[23%] h-[450px] shadow group cursor-pointer  shadow-black/70 rounded-xl overflow-hidden animate__animated animate__zoomIn'
+                <div key={p.id} className='w-[23%] h-[450px] shadow group transition-all duration-500 hover:scale-105 ease-in-out
+                cursor-pointer  shadow-black/70 rounded-xl overflow-hidden animate__animated animate__zoomIn'
                  style={{ animationDelay: `${i * 0.1}s`,animationDuration: "0.8s"  }}
                 >
                     {/* image */}
