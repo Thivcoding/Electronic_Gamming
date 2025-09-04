@@ -24,7 +24,7 @@ const TopCategory = () => {
                         <span>{cate.title2}</span></h1>
                     </div>
                     {/* card-image */}
-                    <div className='w-1/2 h-full  pe-5 pt-10 pb-3'>
+                    <div className='w-1/2 h-full  pe-5 pt-3 pb-3'>
                         <img className='w-full h-full ' src={cate.image} alt="controller" />
                     </div>
                     
