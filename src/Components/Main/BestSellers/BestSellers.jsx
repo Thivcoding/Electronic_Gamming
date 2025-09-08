@@ -3,12 +3,15 @@ import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa6";
 import { categoriesAllInButton } from '../../../Data';
 import 'animate.css';
+import { useNavigate } from 'react-router-dom';
 
 const BestSellers = () => {
 
     const [ActiveTap,setActiveTap]=useState("cpus");
 
     const ResultProdctShow = categoriesAllInButton.find((c)=>c.id === ActiveTap);
+
+    const Navigate = useNavigate();
 
   return (
     <div className='w-full h-auto px-6 md:px-14'>
@@ -41,7 +44,9 @@ const BestSellers = () => {
         <div className='w-full flex flex-wrap gap-9 py-10 h-auto'>
             {/* card */}
             {ResultProdctShow.products.map((p,i)=>(
-                <div key={p.id} className='w-[23%] h-[450px] shadow group transition-all duration-500 hover:scale-105 ease-in-out
+                <div key={p.id} 
+                    onClick={()=>Navigate(`/category/product/${p.id}`)}
+                className='w-[23%] h-[450px] shadow group transition-all duration-500 hover:scale-105 ease-in-out
                 cursor-pointer  shadow-black/70 rounded-xl overflow-hidden animate__animated animate__zoomIn'
                  style={{ animationDelay: `${i * 0.1}s`,animationDuration: "0.8s"  }}
                 >

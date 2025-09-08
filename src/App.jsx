@@ -4,16 +4,29 @@ import BannerSlider from './Components/Main/Home/Benner'
 import TopCategory from './Components/Main/TopCategory/TopCategory'
 import BestSellers from './Components/Main/BestSellers/BestSellers'
 import Footer from './Components/Footer/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import DetailBestSeller from './Components/Main/BestSellers/DetailBestSeller'
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <BannerSlider/>
-      <TopCategory/>
-      <BestSellers/>
-      <Footer/>
-    </div>
+
+    <BrowserRouter>
+          <Navbar/>
+      <Routes>
+          {/* route home page */}
+          <Route path='/' element={
+              <div>
+                    <BannerSlider/>
+                    <TopCategory/>
+                    <BestSellers/>
+                  <Footer/>
+              </div>
+          }/>
+
+          {/* route for product in best seller */}
+          <Route path='/category/product/:id' element={<DetailBestSeller/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
