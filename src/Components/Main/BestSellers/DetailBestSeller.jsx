@@ -24,7 +24,7 @@ const DetailBestSeller = () => {
             {/* detail */}
             <div className='w-1/2 h-full text-white  p-10'>
                 <h1 className='text-2xl font-bold'>Category</h1>
-                <h1 className='text-4xl font-bold py-5'>Product Name</h1>
+                <h1 className='text-3xl font-bold py-3'>{product.title}</h1>
                 <p className='text-[20px] '>{product.description}</p>
                 {/* button */}
                 <div className='w-full h-auto flex justify-around mt-14'>
