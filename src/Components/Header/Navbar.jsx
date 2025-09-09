@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '../../assets/icon/logo.svg'
 import { menu_bottom, menu_top } from '../../Data'
 import { IoMdSearch } from "react-icons/io";
@@ -8,11 +8,14 @@ import { FiShoppingCart } from "react-icons/fi";
 import { IoCloseSharp } from "react-icons/io5";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { FaBars } from "react-icons/fa";
+import { CartContext } from '../CartContext';
 
 const Navbar = () => {
     const [OpenSearch,setOperSearch] = useState(false);
     const [OpenCart,setOpenCart] = useState(false);
     const [OpenSidbar,setOpenSidbar] = useState(false);
+
+    const {cart} = useContext(CartContext)
 
   return (
     <header className='w-full shadow-md h-[130px] lg:h-[200px] bg-gray-500'>
@@ -78,7 +81,7 @@ const Navbar = () => {
                           onClick={()=>setOpenCart(!OpenCart)}
                         className='w-5 h-5 flex items-center justify-center
                         text-white bg-red-500 cursor-pointer rounded-full absolute -right-3 -top-3'>
-                          1
+                          {cart.length}
                         </div>
                     </div>
 
