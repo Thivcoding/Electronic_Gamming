@@ -30,8 +30,8 @@ const DetailBestSeller = () => {
                 <div className='w-full h-auto flex justify-around mt-14'>
                     <button 
                     onClick={()=>AddToCart(product)}
-                    className='bg-blue-700 hover:translate-y-1  hover:shadow-md shadow-red-500/80 transition-all duration-300 ease-in-out cursor-pointer px-8 py-3 text-white rounded-xl'>Add To Cart</button>
-                    <Link to={'/'} className='bg-red-700 hover:translate-y-1  hover:shadow-md shadow-sky-500/80 transition-all duration-300 ease-in-out cursor-pointer px-8 py-3 text-white rounded-xl'>Back To Product</Link>
+                    className='bg-blue-500 hover:translate-y-1  hover:shadow-md shadow-red-500/80 transition-all duration-300 ease-in-out cursor-pointer px-8 py-3 text-white rounded-xl'>Add To Cart</button>
+                    <Link to={'/'} className='bg-red-500 hover:translate-y-1  hover:shadow-md shadow-sky-500/80 transition-all duration-300 ease-in-out cursor-pointer px-8 py-3 text-white rounded-xl'>Back To Product</Link>
                 </div>
             </div>
         </div>

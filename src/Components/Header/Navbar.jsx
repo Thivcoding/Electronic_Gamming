@@ -15,7 +15,7 @@ const Navbar = () => {
     const [OpenCart,setOpenCart] = useState(false);
     const [OpenSidbar,setOpenSidbar] = useState(false);
 
-    const {cart} = useContext(CartContext)
+    const {cart,RemoveOnCart} = useContext(CartContext)
 
   return (
     <header className='w-full shadow-md h-[130px] lg:h-[200px] bg-gray-500'>
@@ -137,9 +137,37 @@ const Navbar = () => {
                       />
                       <div className='w-full h-full px-5 flex items-center '>
                           <RiShoppingBag4Line className='text-3xl me-2'  />
-                        <h1 className='font-bold text-xl'>1 ITEM</h1>
+                        <h1 className='font-bold text-xl'>{cart.length} ITEM</h1>
                       </div>
               </div>
+
+              {/* content Cart */}
+              <div className='w-full'>
+                {cart.length == 0 
+                ?(
+                  <p className='text-center py-10 text-xl'>Products is Not Found Item .!</p>
+                ):(
+                  <ul className='w-full p-4 space-y-3 '>
+                      {cart.map((item)=>(
+                        <li className='flex items-center justify-between bg-gray-300 p-2 
+                                        shadow-sm shadow-black rounded-md'>
+                            <img className='w-20 h-20 rounded-md' src={item.image} alt="" />
+                            <div>
+                              <h1 className='text-xl text-blue-500 font-bold'>{item.title}</h1>
+                              <del className='text-red-600 mr-4 font-bold'>{item.priceOld}</del>
+                              <span className='text-slate-700 font-bold'>{item.priceDiscount}</span>
+                            </div>
+                            <button
+                            onClick={()=>RemoveOnCart(item.id)}
+                            className='py-2 text-white cursor-pointer hover:shadow-amber-300 shadow-md
+                            px-4 bg-red-500 rounded-md hover:scale-105 transition-all duration-300 ease-in-out'>Remove Cart</button>
+                        </li>
+                       
+                      ))}
+                  </ul>
+                )}
+              </div>
+
         </div>
            
         {/* OpenSidbar */}
