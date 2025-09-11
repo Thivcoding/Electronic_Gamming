@@ -315,3 +315,71 @@ export const categoriesAllInButton = [
 ];
 
 
+export const controllerProducts = [
+  {
+    id: "ctrl1",
+    name: "Intel Core i7 12700K",
+    description: "Intel Core i7-12700K ជា CPU Alder Lake មាន 12 cores និង 20 threads ផ្តល់ performance ខ្ពស់សម្រាប់ gamers និង creators។",
+    priceOld: "$420",
+    priceDiscount: "$380",
+    image: cpu1
+  },
+  {
+    id: "ctrl2",
+    name: "AMD Ryzen 7 5800X",
+    description: "AMD Ryzen 7 5800X មាន 8 cores និង 16 threads ផ្អែកលើ Zen 3 architecture ផ្តល់ប្រសិទ្ធភាពខ្ពស់សម្រាប់ហ្គេម និងការងារទាមទារ។",
+    priceOld: "$390",
+    priceDiscount: "$350",
+    image: cpu2
+  },
+  {
+    id: "ctrl3",
+    name: "NVIDIA GeForce RTX 4070",
+    description: "NVIDIA RTX 4070 មាន 12GB VRAM, គាំទ្រ ray tracing និង DLSS 3, សមស្របសម្រាប់ gamers 1440p និង creators។",
+    priceOld: "$650",
+    priceDiscount: "$599",
+    image: grap1
+  },
+  {
+    id: "ctrl4",
+    name: "AMD Radeon RX 6800 XT",
+    description: "AMD RX 6800 XT មាន 16GB VRAM និង RDNA 2 architecture សម្រាប់ 4K gaming និង workstation។",
+    priceOld: "$620",
+    priceDiscount: "$570",
+    image: grap2
+  },
+  {
+    id: "ctrl5",
+    name: "Corsair Vengeance 16GB DDR5",
+    description: "Corsair Vengeance 16GB DDR5 RAM មានល្បឿនខ្ពស់ សមស្របសម្រាប់ workstation និង gaming PCs។",
+    priceOld: "$150",
+    priceDiscount: "$120",
+    image: memory1
+  },
+  {
+    id: "ctrl6",
+    name: "G.Skill Trident Z 32GB DDR4",
+    description: "G.Skill Trident Z RGB DDR4 32GB មាន performance ខ្ពស់ សម្រាប់ content creators និង gamers។",
+    priceOld: "$180",
+    priceDiscount: "$140",
+    image: memory2
+  },
+  {
+    id: "ctrl7",
+    name: "ASUS TUF Gaming 27''",
+    description: "ASUS TUF Gaming 27 មាន refresh rate 165Hz និង response time 1ms សមស្របសម្រាប់ gamers។",
+    priceOld: "$320",
+    priceDiscount: "$280",
+    image: monitor1
+  },
+  {
+    id: "ctrl8",
+    name: "LG UltraGear 34'' Curved",
+    description: "LG UltraGear 34'' Curved UltraWide QHD ផ្តល់បទពិសោធន៍ immersive gaming និង productivity។",
+    priceOld: "$650",
+    priceDiscount: "$580",
+    image: monitor2
+  }
+];
+
+

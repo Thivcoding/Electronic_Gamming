@@ -7,7 +7,9 @@ const DetailBestSeller = () => {
     const {id} = useParams(); //{id : cpu3}
     
     let product;
+    let category ;
     for(const cate of categoriesAllInButton){
+        category = cate;
         product = cate.products.find((p)=>p.id == id);
         if(product)break;
     }
@@ -23,7 +25,7 @@ const DetailBestSeller = () => {
             </div>
             {/* detail */}
             <div className='w-1/2 h-full text-white  p-10'>
-                <h1 className='text-2xl font-bold'>Category</h1>
+                <h1 className='text-2xl font-bold'>{category.category}</h1>
                 <h1 className='text-3xl font-bold py-3'>{product.title}</h1>
                 <p className='text-[20px] '>{product.description}</p>
                 {/* button */}

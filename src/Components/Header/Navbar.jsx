@@ -15,7 +15,7 @@ const Navbar = () => {
     const [OpenCart,setOpenCart] = useState(false);
     const [OpenSidbar,setOpenSidbar] = useState(false);
 
-    const {cart,RemoveOnCart} = useContext(CartContext)
+    const {cart,RemoveOnCart,OpenSidbarCart,openSidCart} = useContext(CartContext)
 
   return (
     <header className='w-full shadow-md h-[130px] lg:h-[200px] bg-gray-500'>
@@ -128,12 +128,17 @@ const Navbar = () => {
                     
         </div>
         <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl  z-50 fixed top-0 right-0 
-                          ${OpenCart ? "translate-x-0" : "translate-x-full" }
+                          ${OpenCart ||  openSidCart? "translate-x-0" : "translate-x-full" }
                             transition-all duration-500 ease-in-out `}>
 
               <div className='w-full h-16  border-b relative'>
                       <IoCloseSharp className='absolute text-black cursor-pointer top-4 text-3xl right-5'
-                        onClick={()=>setOpenCart(false)}
+                        onClick={()=>{
+                          setOpenCart(false)
+                          OpenSidbarCart()
+                        }
+                          
+                        }
                       />
                       <div className='w-full h-full px-5 flex items-center '>
                           <RiShoppingBag4Line className='text-3xl me-2'  />
@@ -149,11 +154,11 @@ const Navbar = () => {
                 ):(
                   <ul className='w-full p-4 space-y-3 '>
                       {cart.map((item)=>(
-                        <li className='flex items-center justify-between bg-gray-300 p-2 
+                        <li className='flex items-center justify-between bg-gray-100 p-2 
                                         shadow-sm shadow-black rounded-md'>
                             <img className='w-20 h-20 rounded-md' src={item.image} alt="" />
                             <div>
-                              <h1 className='text-xl text-blue-500 font-bold'>{item.title}</h1>
+                              <h1 className='text-base text-blue-500 font-bold'>{item.title}</h1>
                               <del className='text-red-600 mr-4 font-bold'>{item.priceOld}</del>
                               <span className='text-slate-700 font-bold'>{item.priceDiscount}</span>
                             </div>

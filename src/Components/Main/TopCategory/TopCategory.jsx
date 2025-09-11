@@ -2,8 +2,10 @@ import React from 'react'
 import { Topcategories } from '../../../Data'
 import benner_mask_1 from '../../../assets/Images/Benner-Mask-1.webp'
 import benner_mask_2 from '../../../assets/Images/Benner-Mask-2.webp'
+import { useNavigate } from 'react-router-dom'
 
 const TopCategory = () => {
+    const navigate = useNavigate();
   return (
     <div className='w-full h-auto py-16 px-6 md:px-14'>
         <h1 className='text-3xl font-bold'>
@@ -15,7 +17,9 @@ const TopCategory = () => {
         <div className='w-full h-auto flex gap-5 md:gap-7 flex-wrap py-10'>
             {/* card */}
             {Topcategories.map((cate)=>(
-                <div className='w-full md:w-[48%] lg:w-[32%]  flex lg:h-[300px]  cursor-pointer rounded-xl group bg-gray-200 '>
+                <div
+                    onClick={()=>navigate(cate.link)}
+                key={cate.id} className='w-full md:w-[48%] lg:w-[32%]  flex lg:h-[300px]  cursor-pointer rounded-xl group bg-gray-200 '>
                     {/* card-detail */}
                     <div className='w-1/2 h-full pt-10 ps-10 '>
                         <button className='bg-white px-5 py-1 text-sm rounded-md text-gray-500 group-hover:bg-red-500

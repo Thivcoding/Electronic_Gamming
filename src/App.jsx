@@ -6,6 +6,7 @@ import BestSellers from './Components/Main/BestSellers/BestSellers'
 import Footer from './Components/Footer/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import DetailBestSeller from './Components/Main/BestSellers/DetailBestSeller'
+import Cate_Controller from './Components/Main/TopCategory/Cate_Controller'
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
 
           {/* route for product in best seller */}
           <Route path='/category/product/:id' element={<DetailBestSeller/>} />
+
+          {/* top category */}
+          <Route path='/Controllers' element={<Cate_Controller/>}/>
       </Routes>
     </BrowserRouter>
   )

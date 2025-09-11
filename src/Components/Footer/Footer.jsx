@@ -39,82 +39,53 @@ const Footer = () => {
                             <FaTelegram color='white' size={40} className='cursor-pointer' />
                         </div>
                 </div>
-
                 {/* information website */}
-                <div className='w-full flex flex-wrap h-[250px]'>
-                    <div className='w-[25%] h-full'>
-                            <h1 className='text-3xl font-bold text-white uppercase'>Resources</h1>
-
-                            <ul className='w-full pt-5 text-gray-300 '>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                            </ul>
-                    </div>
-                    <div className='w-[25%] h-full'>
-                            <h1 className='text-3xl font-bold text-white uppercase'>Resources</h1>
-
-                            <ul className='w-full pt-5 text-gray-300 '>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                            </ul>
-                    </div>
-                    <div className='w-[25%] h-full'>
-                            <h1 className='text-3xl font-bold text-white uppercase'>Resources</h1>
-
-                            <ul className='w-full pt-5 text-gray-300 '>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                            </ul>
-                    </div>
-                    <div className='w-[25%] h-full'>
-                            <h1 className='text-3xl font-bold text-white uppercase'>Resources</h1>
-
-                            <ul className='w-full pt-5 text-gray-300 '>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                                <li className='py-1'>
-                                    <a href="" className='text-xl'>Application</a>
-                                </li>
-                            </ul>
-                    </div>
+                <div className="w-full flex flex-wrap h-[250px] bg-blue-900 px-10">
+                {/* SHOP */}
+                <div className="w-[25%] h-full">
+                    <h1 className="text-2xl font-bold text-white uppercase">Shop</h1>
+                    <ul className="w-full pt-5 text-gray-300">
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Gaming Laptops</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Consoles</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Accessories</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Gift Cards</a></li>
+                    </ul>
                 </div>
+
+                {/* SUPPORT */}
+                <div className="w-[25%] h-full">
+                    <h1 className="text-2xl font-bold text-white uppercase">Support</h1>
+                    <ul className="w-full pt-5 text-gray-300">
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Order Tracking</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Returns & Refunds</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Technical Support</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Warranty</a></li>
+                    </ul>
+                </div>
+
+                {/* COMMUNITY */}
+                <div className="w-[25%] h-full">
+                    <h1 className="text-2xl font-bold text-white uppercase">Community</h1>
+                    <ul className="w-full pt-5 text-gray-300">
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Forums</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Events</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Gaming Blog</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Newsletter</a></li>
+                    </ul>
+                </div>
+
+                {/* CONTACT */}
+                <div className="w-[25%] h-full">
+                    <h1 className="text-2xl font-bold text-white uppercase">Contact</h1>
+                    <ul className="w-full pt-5 text-gray-300">
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">About Us</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Careers</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Privacy Policy</a></li>
+                    <li className="py-1"><a href="#" className="text-lg hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                </div>
+
             </div>
                 
         </div>
