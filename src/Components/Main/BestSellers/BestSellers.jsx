@@ -34,8 +34,10 @@ const BestSellers = () => {
             </div>
 
             {/* view more */}
-            <Link to={'/home'} className=' bg-blue-500 px-10 py-3 rounded-sm 
+            <div className='md:w-full lg:w-auto flex justify-end md:pr-3 lg:pr-0'>
+                    <Link to={'/home'} className=' bg-blue-500 px-10 py-3 rounded-sm 
                 text-white font-bold cursor-pointer text-sm'>View More</Link>
+            </div>
         </div>
 
         <hr />

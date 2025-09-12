@@ -28,7 +28,7 @@ const Navbar = () => {
         </h1>
 
         {/* nav-top */}
-        <nav className='w-full h-[80%] lg:h-[50%] flex justify-between items-center px-5 lg:px-14 bg-black'>
+        <nav className='w-full h-[80%] lg:h-[50%] flex justify-between items-center px-5 md:px-7 lg:px-14 bg-black'>
            
             <div className='flex lg:hidden '> 
               {/* icon bar  */}
@@ -182,19 +182,33 @@ const Navbar = () => {
         </div>
            
         {/* OpenSidbar */}
-            <div className={`lg:w-[500px] w-[85%] md:w-1/2 z-50 h-screen bg-white shadow-2xl fixed top-0 left-0 
+            <div className={`lg:w-[500px] w-[85%] md:w-1/2 z-50 h-screen bg-sky-500 shadow-2xl fixed top-0 left-0 
                 ${OpenSidbar ? "translate-x-0" : "-translate-x-full" }
                   transition-all duration-500 ease-in-out `}>
 
-                  <div className='w-full h-16  border-b relative'>
-                          <IoCloseSharp className='absolute text-black cursor-pointer top-4 text-3xl right-5'
+                  <div className='w-full h-24 px-5  border-b border-black relative'>
+                          <IoCloseSharp className='absolute text-white cursor-pointer top-7 md:top-8 text-4xl lg:text-3xl right-5'
                             onClick={()=>setOpenSidbar(false)}
                           />
-                          <div className='w-full h-full px-5 flex items-center '>
-                              <RiShoppingBag4Line className='text-3xl me-2'  />
-                            <h1 className='font-bold text-xl'>ETEC CENTER</h1>
+                          <div className='w-full h-full flex items-center '>
+                            {/* logo */}
+                            <Link to={'/'} className='lg:w-[15%] h-full flex items-center' >
+                              <img src={logo} alt="logo" />
+                            </Link>
                           </div>
+                         
                   </div>
+
+                   {/* menu */}
+                    <ul className='w-full h-full bg-white'>
+                      {menu_top.map((e)=>(
+                        <li key={e.name} className='px-4 py-6 hover:bg-gray-200 transition-all group duration-300 ease-in-out'>
+                            <a href={e.link} className='text-black font-bold group-hover:text-red-500 text-xl'>
+                              {e.name}
+                            </a>
+                        </li>
+                      ))}
+                    </ul>
             </div>
 
     </header>
