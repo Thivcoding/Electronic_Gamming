@@ -19,12 +19,12 @@ const TopCategory = () => {
             {Topcategories.map((cate)=>(
                 <div
                     onClick={()=>navigate(cate.link)}
-                key={cate.id} className='w-full md:w-[48%] lg:w-[32%]  flex lg:h-[300px]  cursor-pointer rounded-xl group bg-gray-200 '>
+                key={cate.id} className='w-full md:w-[48%] lg:w-[32%]  flex h-[250px] lg:h-[300px]  cursor-pointer rounded-xl group bg-gray-200 '>
                     {/* card-detail */}
-                    <div className='w-1/2 h-full pt-10 ps-10 '>
+                    <div className='w-1/2 h-full pt-10 lg:ps-10 ps-5'>
                         <button className='bg-white px-5 py-1 text-sm rounded-md text-gray-500 group-hover:bg-red-500
                         group-hover:text-white  transition-all duration-300 ease-in-out'>{cate.products} Product</button>
-                        <h1 className='text-4xl hover:text-red-500 mt-3 font-bold transition-all duration-300 ease-in-out'>{cate.title1}<br />
+                        <h1 className='text-3xl lg:text-4xl hover:text-red-500 mt-3 font-bold transition-all duration-300 ease-in-out'>{cate.title1}<br />
                         <span>{cate.title2}</span></h1>
                     </div>
                     {/* card-image */}
@@ -47,7 +47,7 @@ const TopCategory = () => {
                 </div>
                 <div className='w-full h-full absolute top-0 left-0 p-5 bg-black/20'>
                     <h3 className='text-2xl text-white font-bold'>THE ULTIMATE PLAY</h3>
-                    <h1 className='text-5xl py-2 font-bold text-white'>GEFORCE RTX <br />
+                    <h1 className='text-2xl lg:text-5xl py-2 font-bold text-white'>GEFORCE RTX <br />
                         3060TI 
                     </h1>
                     <h2 className='text-green-400 text-2xl font-bold '>$599.99</h2>
@@ -66,7 +66,7 @@ const TopCategory = () => {
                 </div>
                 <div className='w-full h-full absolute  top-0 left-0 p-5 '>
                     <h3 className='text-2xl text-white font-bold'>POWER TO THE CORE</h3>
-                    <h1 className='text-5xl py-2 font-bold text-white'>AORUS ELITE<br />
+                    <h1 className='text-2xl lg:text-5xl py-2 font-bold text-white'>AORUS ELITE<br />
                         AX AM5
                     </h1>
                     <h2 className='text-sky-400 text-2xl font-bold '>$199.99</h2>

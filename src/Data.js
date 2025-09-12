@@ -61,14 +61,16 @@ export const Topcategories = [
   },
   {
     id: 5,
-    title1: "Keyboards",
+    title1: "Gaming",
+    title2: "Keyboards",
     products: 9,
     image: Gaming_keyboard,
     link: "/keyboards",
   },
   {
     id: 6,
-    title1: "Accessories",
+    title1: "Gaming",
+    title2: "Accessories",
     products: 27,
     image: Gaming_Accessories,
     link: "/accessories",
@@ -314,72 +316,475 @@ export const categoriesAllInButton = [
   }
 ];
 
+import ctrl1 from '../src/assets/Images/ctrl1.jpg'
+import ctrl2 from '../src/assets/Images/ctrl2.jpg'
+import ctrl3 from '../src/assets/Images/ctrl3.jpg'
+import ctrl4 from '../src/assets/Images/ctrl4.jpg'
+import ctrl5 from '../src/assets/Images/ctrl5.jpg'
+import ctrl6 from '../src/assets/Images/ctrl6.jpg'
+import ctrl7 from '../src/assets/Images/ctrl7.jpg'
+import ctrl8 from '../src/assets/Images/ctrl8.jpg'
 
 export const controllerProducts = [
   {
     id: "ctrl1",
-    name: "Intel Core i7 12700K",
-    description: "Intel Core i7-12700K ជា CPU Alder Lake មាន 12 cores និង 20 threads ផ្តល់ performance ខ្ពស់សម្រាប់ gamers និង creators។",
-    priceOld: "$420",
-    priceDiscount: "$380",
-    image: cpu1
+    cate: "Controller",
+    title: "Xbox Wireless Controller",
+    description: "Xbox Wireless Controller មាន ergonomic design, textured grip និង Bluetooth connectivity សម្រាប់ PC និង Console gaming។",
+    priceOld: "$70",
+    priceDiscount: "$55",
+    image: ctrl1
   },
   {
     id: "ctrl2",
-    name: "AMD Ryzen 7 5800X",
-    description: "AMD Ryzen 7 5800X មាន 8 cores និង 16 threads ផ្អែកលើ Zen 3 architecture ផ្តល់ប្រសិទ្ធភាពខ្ពស់សម្រាប់ហ្គេម និងការងារទាមទារ។",
-    priceOld: "$390",
-    priceDiscount: "$350",
-    image: cpu2
+    cate: "Controller",
+    title: "PlayStation DualSense",
+    description: "PS5 DualSense controller មាន adaptive triggers, haptic feedback និង built-in mic សម្រាប់ immersive gaming។",
+    priceOld: "$75",
+    priceDiscount: "$60",
+    image: ctrl2
   },
   {
     id: "ctrl3",
-    name: "NVIDIA GeForce RTX 4070",
-    description: "NVIDIA RTX 4070 មាន 12GB VRAM, គាំទ្រ ray tracing និង DLSS 3, សមស្របសម្រាប់ gamers 1440p និង creators។",
-    priceOld: "$650",
-    priceDiscount: "$599",
-    image: grap1
+    cate: "Controller",
+    title: "Nintendo Switch Pro Controller",
+    description: "Switch Pro Controller មាន ergonomic design, motion controls និង battery life 40 hours សម្រាប់ Switch gamers។",
+    priceOld: "$80",
+    priceDiscount: "$65",
+    image: ctrl3
   },
   {
     id: "ctrl4",
-    name: "AMD Radeon RX 6800 XT",
-    description: "AMD RX 6800 XT មាន 16GB VRAM និង RDNA 2 architecture សម្រាប់ 4K gaming និង workstation។",
-    priceOld: "$620",
-    priceDiscount: "$570",
-    image: grap2
+    cate: "Controller",
+    title: "Razer Wolverine V2",
+    description: "Razer Wolverine V2 មាន Mecha-Tactile buttons, remappable buttons និង ergonomic L-shaped hand grips សម្រាប់ Xbox/PC។",
+    priceOld: "$100",
+    priceDiscount: "$85",
+    image: ctrl4
   },
   {
     id: "ctrl5",
-    name: "Corsair Vengeance 16GB DDR5",
-    description: "Corsair Vengeance 16GB DDR5 RAM មានល្បឿនខ្ពស់ សមស្របសម្រាប់ workstation និង gaming PCs។",
-    priceOld: "$150",
-    priceDiscount: "$120",
-    image: memory1
+    cate: "Controller",
+    title: "8Bitdo Pro 2",
+    description: "8Bitdo Pro 2 មាន retro design, customizable buttons និង multi-platform support សម្រាប់ gamers classic និង modern។",
+    priceOld: "$70",
+    priceDiscount: "$55",
+    image: ctrl5
   },
   {
     id: "ctrl6",
-    name: "G.Skill Trident Z 32GB DDR4",
-    description: "G.Skill Trident Z RGB DDR4 32GB មាន performance ខ្ពស់ សម្រាប់ content creators និង gamers។",
-    priceOld: "$180",
-    priceDiscount: "$140",
-    image: memory2
+    cate: "Controller",
+    title: "Logitech F710 Wireless",
+    description: "Logitech F710 Wireless មាន dual vibration feedback, 2.4GHz wireless connection និង programmable buttons។",
+    priceOld: "$60",
+    priceDiscount: "$45",
+    image: ctrl6
   },
   {
     id: "ctrl7",
-    name: "ASUS TUF Gaming 27''",
-    description: "ASUS TUF Gaming 27 មាន refresh rate 165Hz និង response time 1ms សមស្របសម្រាប់ gamers។",
-    priceOld: "$320",
-    priceDiscount: "$280",
-    image: monitor1
+    cate: "Controller",
+    title: "Scuf Instinct Pro",
+    description: "Scuf Instinct Pro មាន performance paddles, adjustable triggers និង ergonomic design សម្រាប់ competitive gamers។",
+    priceOld: "$200",
+    priceDiscount: "$180",
+    image: ctrl7
   },
   {
     id: "ctrl8",
-    name: "LG UltraGear 34'' Curved",
-    description: "LG UltraGear 34'' Curved UltraWide QHD ផ្តល់បទពិសោធន៍ immersive gaming និង productivity។",
-    priceOld: "$650",
-    priceDiscount: "$580",
-    image: monitor2
+    cate: "Controller",
+    title: "GameSir T4 Pro",
+    description: "GameSir T4 Pro មាន RGB backlight, multi-platform support និង ergonomic build សម្រាប់ PC, Android និង Switch។",
+    priceOld: "$60",
+    priceDiscount: "$48",
+    image: ctrl8
   }
 ];
+
+import mouse1 from '../src/assets/Images/mouse1.jpg'
+import mouse2 from '../src/assets/Images/mouse2.jpg'
+import mouse3 from '../src/assets/Images/mouse3.jpg'
+import mouse4 from '../src/assets/Images/mouse4.jpg'
+import mouse5 from '../src/assets/Images/mouse5.jpg'
+import mouse6 from '../src/assets/Images/mouse6.jpg'
+import mouse7 from '../src/assets/Images/mouse7.jpg'
+import mouse8 from '../src/assets/Images/mouse8.jpg'
+export const mouseProducts = [
+  {
+    id: "mouse1",
+    cate: "Gaming Mouse",
+    title: "Logitech G502 HERO",
+    description: "Logitech G502 HERO ជា gaming mouse មាន HERO sensor 25K DPI, 11 programmable buttons និង RGB lighting សម្រាប់ pro gamers។",
+    priceOld: "$80",
+    priceDiscount: "$65",
+    image: mouse1
+  },
+  {
+    id: "mouse2",
+    cate: "Gaming Mouse",
+    title: "Razer DeathAdder V2",
+    description: "Razer DeathAdder V2 មាន ergonomic design, optical sensor 20K DPI និង Speedflex cable ផ្តល់សមត្ថភាពលេងបានយូរ។",
+    priceOld: "$75",
+    priceDiscount: "$60",
+    image: mouse2
+  },
+  {
+    id: "mouse3",
+    cate: "Gaming Mouse",
+    title: "SteelSeries Rival 600",
+    description: "SteelSeries Rival 600 មាន dual-sensor system, adjustable weight និង RGB lighting សម្រាប់ accuracy ខ្ពស់។",
+    priceOld: "$85",
+    priceDiscount: "$70",
+    image: mouse3
+  },
+  {
+    id: "mouse4",
+    cate: "Gaming Mouse",
+    title: "Corsair Dark Core RGB Pro",
+    description: "Corsair Dark Core RGB Pro ជា wireless mouse មាន 18K DPI sensor, 8 programmable buttons និង RGB dynamic។",
+    priceOld: "$90",
+    priceDiscount: "$75",
+    image: mouse4
+  },
+  {
+    id: "mouse5",
+    cate: "Gaming Mouse",
+    title: "Glorious Model O",
+    description: "Glorious Model O មាន lightweight honeycomb design, 67g, sensor 12K DPI និង flexible cable សម្រាប់ competitive gaming។",
+    priceOld: "$70",
+    priceDiscount: "$55",
+    image: mouse5
+  },
+  {
+    id: "mouse6",
+    cate: "Gaming Mouse",
+    title: "Cooler Master MM710",
+    description: "Cooler Master MM710 មាន ultra-lightweight 53g, durable design និង sensor 16K DPI សម្រាប់ gamers ល្បឿនលឿន។",
+    priceOld: "$65",
+    priceDiscount: "$50",
+    image: mouse6
+  },
+  {
+    id: "mouse7",
+    cate: "Gaming Mouse",
+    title: "HyperX Pulsefire FPS Pro",
+    description: "HyperX Pulsefire FPS Pro មាន Pixart 3389 sensor 16K DPI, customizable RGB និង ergonomic design សម្រាប់ FPS lovers។",
+    priceOld: "$75",
+    priceDiscount: "$58",
+    image: mouse7
+  },
+  {
+    id: "mouse8",
+    cate: "Gaming Mouse",
+    title: "ASUS ROG Gladius III",
+    description: "ASUS ROG Gladius III មាន ergonomic design, sensor 19K DPI, swappable switches និង RGB Aura Sync។",
+    priceOld: "$85",
+    priceDiscount: "$68",
+    image: mouse8
+  }
+];
+
+// import mouse8 from '../src/assets/Images/mouse8.jpg'
+export const chairProducts = [
+  {
+    id: "chair1",
+    cate: "Gaming Chair",
+    title: "Secretlab TITAN Evo 2022",
+    description: "Secretlab TITAN Evo 2022 ជា gaming chair ergonomics ខ្ពស់ មាន memory foam, multi-tilt mechanism និង durable leatherette សម្រាប់ការលេងហ្គេមយូរម៉ោង។",
+    priceOld: "$520",
+    priceDiscount: "$470",
+    // image: chair1
+  },
+  {
+    id: "chair2",
+    cate: "Gaming Chair",
+    title: "DXRacer Formula Series",
+    description: "DXRacer Formula Series មាន ergonomic design, adjustable armrests និង breathable material សមស្របសម្រាប់ gamers និង streamers។",
+    priceOld: "$400",
+    priceDiscount: "$350",
+    // image: chair2
+  },
+  {
+    id: "chair3",
+    cate: "Gaming Chair",
+    title: "AKRacing Masters Series",
+    description: "AKRacing Masters Series មានសម្ភារៈ premium PU leather, adjustable tilt និង 4D armrests ផ្តល់សុខស្រួលខ្ពស់។",
+    priceOld: "$450",
+    priceDiscount: "$399",
+    // image: chair3
+  },
+  {
+    id: "chair4",
+    cate: "Gaming Chair",
+    title: "Respawn 110 Racing Style",
+    description: "Respawn 110 មាន footrest, ergonomic padding និង recline 155° សម្រាប់កំសាន្ត និងការលេងហ្គេម។",
+    priceOld: "$300",
+    priceDiscount: "$260",
+    // image: chair4
+  },
+  {
+    id: "chair5",
+    cate: "Gaming Chair",
+    title: "Cougar Armor S Royal",
+    description: "Cougar Armor S Royal មាន design luxury, breathable PVC leather និង headrest pillow ដើម្បីការពារក ឆ្អឹងខ្នង។",
+    priceOld: "$350",
+    priceDiscount: "$310",
+    // image: chair5
+  },
+  {
+    id: "chair6",
+    cate: "Gaming Chair",
+    title: "Noblechairs Hero",
+    description: "Noblechairs Hero មាន lumbar support system, high-density cold foam និង strong steel frame សម្រាប់ durability។",
+    priceOld: "$520",
+    priceDiscount: "$480",
+    // image: chair6
+  },
+  {
+    id: "chair7",
+    cate: "Gaming Chair",
+    title: "Vertagear SL5000",
+    description: "Vertagear SL5000 មាន ergonomic design, 4D adjustable armrests និង durable steel frame សម្រាប់ pro gamers។",
+    priceOld: "$400",
+    priceDiscount: "$360",
+    // image: chair7
+  },
+  {
+    id: "chair8",
+    cate: "Gaming Chair",
+    title: "Razer Iskur",
+    description: "Razer Iskur ជា gaming chair មាន lumbar support adjustable, high-density foam និង multi-layered synthetic leather។",
+    priceOld: "$500",
+    priceDiscount: "$450",
+    // image: chair8
+  }
+];
+
+export const headsetProducts = [
+  {
+    id: "headset1",
+    cate: "Gaming Headset",
+    title: "SteelSeries Arctis 7",
+    description: "SteelSeries Arctis 7 ជា wireless gaming headset មាន DTS Headphone:X v2.0 surround sound និង comfort ear cushions សម្រាប់ការលេងហ្គេមយូរ។",
+    priceOld: "$170",
+    priceDiscount: "$140",
+    // image: headset1
+  },
+  {
+    id: "headset2",
+    cate: "Gaming Headset",
+    title: "HyperX Cloud II",
+    description: "HyperX Cloud II មាន 7.1 virtual surround sound, memory foam ear pads និង durable aluminum frame សម្រាប់ sound quality ខ្ពស់។",
+    priceOld: "$150",
+    priceDiscount: "$120",
+    // image: headset2
+  },
+  {
+    id: "headset3",
+    cate: "Gaming Headset",
+    title: "Razer BlackShark V2",
+    description: "Razer BlackShark V2 មាន TriForce Titanium 50mm drivers, HyperClear mic និង passive noise cancellation សម្រាប់ esports gamers។",
+    priceOld: "$130",
+    priceDiscount: "$105",
+    // image: headset3
+  },
+  {
+    id: "headset4",
+    cate: "Gaming Headset",
+    title: "Corsair HS80 RGB Wireless",
+    description: "Corsair HS80 RGB Wireless មាន Dolby Atmos, 20 hours battery និង RGB lighting សម្រាប់អារម្មណ៍ gaming ខ្ពស់។",
+    priceOld: "$160",
+    priceDiscount: "$130",
+    // image: headset4
+  },
+  {
+    id: "headset5",
+    cate: "Gaming Headset",
+    title: "Logitech G Pro X",
+    description: "Logitech G Pro X មាន Blue VO!CE mic technology, DTS Headphone:X 2.0 និង comfort design សម្រាប់ streamers និង gamers។",
+    priceOld: "$150",
+    priceDiscount: "$125",
+    // image: headset5
+  },
+  {
+    id: "headset6",
+    cate: "Gaming Headset",
+    title: "Astro A50 Wireless",
+    description: "Astro A50 Wireless មាន Dolby Audio, wireless base station និង comfort padding សម្រាប់ console និង PC gaming។",
+    priceOld: "$300",
+    priceDiscount: "$270",
+    // image: headset6
+  },
+  {
+    id: "headset7",
+    cate: "Gaming Headset",
+    title: "Razer Kraken Ultimate",
+    description: "Razer Kraken Ultimate មាន THX Spatial Audio, RGB Chroma និង active noise-cancelling mic សម្រាប់ competitive gamers។",
+    priceOld: "$130",
+    priceDiscount: "$110",
+    // image: headset7
+  },
+  {
+    id: "headset8",
+    cate: "Gaming Headset",
+    title: "Beyerdynamic MMX 300",
+    description: "Beyerdynamic MMX 300 ជា studio-grade gaming headset មាន high-fidelity sound និង comfort build សម្រាប់ audiophiles និង gamers។",
+    priceOld: "$320",
+    priceDiscount: "$290",
+    // image: headset8
+  }
+];
+
+export const keyboardProducts = [
+  {
+    id: "kb1",
+    cate: "Gaming Keyboard",
+    title: "Razer Huntsman Elite",
+    description: "Razer Huntsman Elite មាន optical switches ultra-fast, RGB Chroma lighting និង wrist rest សម្រាប់ការលេងហ្គេមបានយូរ។",
+    priceOld: "$200",
+    priceDiscount: "$170",
+    // image: keyboard1
+  },
+  {
+    id: "kb2",
+    cate: "Gaming Keyboard",
+    title: "Corsair K95 RGB Platinum XT",
+    description: "Corsair K95 RGB Platinum XT មាន Cherry MX switches, 6 macro keys និង per-key RGB lighting សម្រាប់ gamers និង streamers។",
+    priceOld: "$220",
+    priceDiscount: "$190",
+    // image: keyboard2
+  },
+  {
+    id: "kb3",
+    cate: "Gaming Keyboard",
+    title: "SteelSeries Apex Pro",
+    description: "SteelSeries Apex Pro មាន adjustable OmniPoint switches, OLED display និង RGB per-key lighting សម្រាប់ flexibility ខ្ពស់។",
+    priceOld: "$210",
+    priceDiscount: "$185",
+    // image: keyboard3
+  },
+  {
+    id: "kb4",
+    cate: "Gaming Keyboard",
+    title: "Logitech G915 TKL",
+    description: "Logitech G915 TKL wireless មាន low-profile mechanical switches, LIGHTSPEED technology និង RGB lighting។",
+    priceOld: "$230",
+    priceDiscount: "$200",
+    // image: keyboard4
+  },
+  {
+    id: "kb5",
+    cate: "Gaming Keyboard",
+    title: "HyperX Alloy FPS Pro",
+    description: "HyperX Alloy FPS Pro មាន compact design, Cherry MX switches និង durable steel frame សម្រាប់ FPS gamers។",
+    priceOld: "$110",
+    priceDiscount: "$90",
+    // image: keyboard5
+  },
+  {
+    id: "kb6",
+    cate: "Gaming Keyboard",
+    title: "ASUS ROG Strix Scope RX",
+    description: "ASUS ROG Strix Scope RX មាន optical mechanical switches, durable build និង RGB Aura Sync lighting។",
+    priceOld: "$150",
+    priceDiscount: "$125",
+    // image: keyboard6
+  },
+  {
+    id: "kb7",
+    cate: "Gaming Keyboard",
+    title: "Cooler Master MK730",
+    description: "Cooler Master MK730 មាន tenkeyless design, RGB per-key lighting និង removable magnetic wrist rest។",
+    priceOld: "$140",
+    priceDiscount: "$115",
+    // image: keyboard7
+  },
+  {
+    id: "kb8",
+    cate: "Gaming Keyboard",
+    title: "Ducky One 2 Mini",
+    description: "Ducky One 2 Mini មាន 60% compact design, RGB lighting និង double-shot PBT keycaps សម្រាប់ portability និង durability។",
+    priceOld: "$120",
+    priceDiscount: "$100",
+    // image: keyboard8
+  }
+];
+
+export const accessoriesProducts = [
+  {
+    id: "acc1",
+    cate: "Gaming Accessories",
+    title: "Razer Firefly V2",
+    description: "Razer Firefly V2 ជា RGB mousepad មាន micro-textured surface និង Chroma lighting effects សម្រាប់ precision និង style។",
+    priceOld: "$60",
+    priceDiscount: "$45",
+    // image: acc1
+  },
+  {
+    id: "acc2",
+    cate: "Gaming Accessories",
+    title: "Elgato Stream Deck",
+    description: "Elgato Stream Deck មាន LCD keys programmable 15 ប៊ូតុង សម្រាប់ streamers និង creators ដើម្បី control content បានងាយ។",
+    priceOld: "$150",
+    priceDiscount: "$130",
+    // image: acc2
+  },
+  {
+    id: "acc3",
+    cate: "Gaming Accessories",
+    title: "Logitech C922 Pro Webcam",
+    description: "Logitech C922 Pro Webcam មាន 1080p/60fps video, auto light correction និង dual mic សម្រាប់ streamers និង video calls។",
+    priceOld: "$120",
+    priceDiscount: "$95",
+    // image: acc3
+  },
+  {
+    id: "acc4",
+    cate: "Gaming Accessories",
+    title: "Elgato HD60 X Capture Card",
+    description: "Elgato HD60 X ជា external capture card 1080p60 HDR និង passthrough 4K60 HDR10 សម្រាប់ console streamers។",
+    priceOld: "$200",
+    priceDiscount: "$170",
+    // image: acc4
+  },
+  {
+    id: "acc5",
+    cate: "Gaming Accessories",
+    title: "Cooler Master Notepal X3",
+    description: "Cooler Master Notepal X3 cooling pad មាន large 200mm fan និង ergonomic design សម្រាប់ gaming laptops។",
+    priceOld: "$60",
+    priceDiscount: "$45",
+    // image: acc5
+  },
+  {
+    id: "acc6",
+    cate: "Gaming Accessories",
+    title: "Razer Charging Dock",
+    description: "Razer Universal Charging Dock មាន magnetic contact system សម្រាប់ចោទ wireless headsets ឬ controllers។",
+    priceOld: "$40",
+    priceDiscount: "$30",
+    // image: acc6
+  },
+  {
+    id: "acc7",
+    cate: "Gaming Accessories",
+    title: "HyperX Wrist Rest",
+    description: "HyperX Wrist Rest មាន cool gel memory foam និង anti-slip base សម្រាប់ comfort នៅពេលវាយអក្សរ ឬលេងហ្គេម។",
+    priceOld: "$30",
+    priceDiscount: "$20",
+    // image: acc7
+  },
+  {
+    id: "acc8",
+    cate: "Gaming Accessories",
+    title: "ASUS ROG Sheath Extended Mousepad",
+    description: "ASUS ROG Sheath Extended Mousepad មាន anti-fray stitching, rubber base និងទំហំធំ សម្រាប់ desk setups។",
+    priceOld: "$50",
+    priceDiscount: "$35",
+    // image: acc8
+  }
+];
+
+
+
 
 

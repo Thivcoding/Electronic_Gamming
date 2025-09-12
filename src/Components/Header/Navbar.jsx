@@ -9,6 +9,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { FaBars } from "react-icons/fa";
 import { CartContext } from '../CartContext';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [OpenSearch,setOperSearch] = useState(false);
@@ -38,9 +39,9 @@ const Navbar = () => {
             </div>
           
             {/* logo */}
-            <a className='lg:w-[15%] h-full flex items-center' href="">
+            <Link to={'/'} className='lg:w-[15%] h-full flex items-center' >
               <img src={logo} alt="logo" />
-            </a>
+            </Link>
 
             {/* nav-right */}
             <div className='lg:w-[85%] flex h-full'>
@@ -106,7 +107,7 @@ const Navbar = () => {
         <div className={`w-full h-screen fixed  top-0 left-0  z-50 transition-all duration-500 ease-in-out
                 ${OpenSearch ? " bg-black/40  pointer-events-auto" : " pointer-events-none"}`} onClick={()=>setOperSearch(false)}>
         </div>
-        <div className={`w-[400px] h-screen bg-white shadow-2xl fixed  z-50 top-0 lg:left-0 right-0 
+        <div className={`lg:w-[500px] w-[85%] md:w-1/2 h-screen bg-white shadow-2xl fixed  z-50 top-0 lg:left-0 right-0 
                 ${OpenSearch ? "translate-x-0" : "lg:-translate-x-full translate-x-full" }
                   transition-all duration-500 ease-in-out `}>
 
@@ -123,11 +124,16 @@ const Navbar = () => {
         </div>
 
         {/* OpenCart */}
-        <div className={`w-full h-screen fixed  top-0 left-0 z-50 transition-all duration-500 ease-in-out
-                ${OpenCart ? " bg-black/40  pointer-events-auto" : " pointer-events-none"}`} onClick={()=>setOpenCart(false)}>
-                    
+        <div 
+        className={`w-full h-screen fixed  top-0 left-0 z-50 transition-all duration-500 ease-in-out
+                ${OpenCart || openSidCart ? " bg-black/40  pointer-events-auto" : " pointer-events-none"}`} 
+                onClick={()=>{
+                  setOpenCart(false)
+                  OpenSidbarCart()
+                }
+                }>                    
         </div>
-        <div className={`lg:w-[500px] w-full h-screen bg-white shadow-2xl  z-50 fixed top-0 right-0 
+        <div className={`lg:w-[500px] w-[85%] md:w-1/2  h-screen bg-white shadow-2xl  z-50 fixed top-0 right-0 
                           ${OpenCart ||  openSidCart? "translate-x-0" : "translate-x-full" }
                             transition-all duration-500 ease-in-out `}>
 
@@ -158,14 +164,14 @@ const Navbar = () => {
                                         shadow-sm shadow-black rounded-md'>
                             <img className='w-20 h-20 rounded-md' src={item.image} alt="" />
                             <div>
-                              <h1 className='text-base text-blue-500 font-bold'>{item.title}</h1>
-                              <del className='text-red-600 mr-4 font-bold'>{item.priceOld}</del>
-                              <span className='text-slate-700 font-bold'>{item.priceDiscount}</span>
+                              <h1 className='text-xs md:text-base text-blue-500 font-bold'>{item.title}</h1>
+                              <del className='text-red-600 mr-4 text-xs md:text-base font-bold'>{item.priceOld}</del>
+                              <span className='text-slate-700 text-xs md:text-base font-bold'>{item.priceDiscount}</span>
                             </div>
                             <button
                             onClick={()=>RemoveOnCart(item.id)}
-                            className='py-2 text-white cursor-pointer hover:shadow-amber-300 shadow-md
-                            px-4 bg-red-500 rounded-md hover:scale-105 transition-all duration-300 ease-in-out'>Remove Cart</button>
+                            className='py-2 text-xs lg:text-base text-white cursor-pointer hover:shadow-amber-300 shadow-md
+                            lg:px-4 px-2 bg-red-500 rounded-md hover:scale-105 transition-all duration-300 ease-in-out'>Remove Cart</button>
                         </li>
                        
                       ))}
@@ -176,7 +182,7 @@ const Navbar = () => {
         </div>
            
         {/* OpenSidbar */}
-            <div className={`lg:w-[500px] w-full z-50 h-screen bg-white shadow-2xl fixed top-0 left-0 
+            <div className={`lg:w-[500px] w-[85%] md:w-1/2 z-50 h-screen bg-white shadow-2xl fixed top-0 left-0 
                 ${OpenSidbar ? "translate-x-0" : "-translate-x-full" }
                   transition-all duration-500 ease-in-out `}>
 
